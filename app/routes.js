@@ -1,10 +1,12 @@
 const { Router } = require("express");
-const { getStarted } = require("./controller");
+const { documentUpload } = require("./fileHelper");
+const { getStarted, uploadFile } = require("./controller");
 
 /*eslint-disable */
 const router = Router();
 /* eslint-enable */
 
 router.get("/test", getStarted);
+router.post("/file", documentUpload.single("file"), uploadFile);
 
 module.exports = router;
