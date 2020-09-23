@@ -2,9 +2,7 @@ const { Router } = require("express");
 const { documentUpload } = require("./fileHelper");
 const { getStarted, uploadFile } = require("./controller");
 
-/*eslint-disable */
 const router = Router();
-/* eslint-enable */
 
 router.get("/test", getStarted);
 router.post("/file", documentUpload.single("file"), uploadFile);
