@@ -1,0 +1,22 @@
+{
+  "name": "document-converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./app/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "exit-on-epipe": "^1.0.0",
+    "express": "^4.12.3",
+    "fs-extra": "4.0.2",
+    "fs-finder": "^1.8.1",
+    "mammoth": "^1.4.6",
+    "node-cmd": "^3.0.0",
+    "python-shell": "^0.4.0",
+    "request": "^2.81.0"
+  }
+}
