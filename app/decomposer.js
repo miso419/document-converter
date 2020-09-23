@@ -9,6 +9,7 @@ const decomposeDocx = async (originalFilleName) => {
     path: getPath(originalFilleName),
   });
   writeFile({ originalname: decomposedFileName, buffer: result.value });
+  return result.value;
 };
 
 const decompose = (originalFilleName) => {
