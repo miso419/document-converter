@@ -9,7 +9,7 @@ const documentUpload = multer({
   limits: { fileSize: 10485760, files: 100 }, // 10MB per file
 });
 
-const writeFile = ({ originalname, size, buffer }) => {
+const writeFile = ({ originalname, buffer }) => {
   fs.writeFileSync(getPath(originalname), buffer);
 };
 
@@ -47,6 +47,7 @@ function deleteFilePromise(filePath) {
 }
 
 module.exports = {
+  getPath,
   documentUpload,
   writeFile,
   convertFileBufferToStr,
