@@ -15,7 +15,15 @@ const uploadFile = async (req, res, next) => {
   return res.status(200).send(result.data);
 };
 
+const getRawData = async (req, res, next) => {
+  writeFile(req.file);
+  const decomposedText = await decompose(req.file.originalname);
+  const result = await axios.post(`${cvParserRoot}/raw`, { decomposedText });
+  return res.status(200).send(result.data);
+};
+
 module.exports = {
   getStarted,
   uploadFile,
+  getRawData,
 };
